@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nuxt:
+    container_name: nuxt
+    build:
+      context: ./nuxt
+    command: sh -c 'yarn && yarn run dev'
+    volumes:
+      - ./nuxt:/nuxt
+    ports:
+      - "3000:3000"
